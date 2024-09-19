@@ -1,0 +1,109 @@
+#actions {
+    display: flex;
+    flex-direction: row;
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+    justify-content: center;
+    gap: 10px;
+    width: auto;
+}
+
+#actions button {
+    font-size: 1.5em;
+    padding: 10px 20px;
+    margin-bottom: 10px;
+}
+
+body {
+    background-image: url('background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    padding: 10px;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 25%;
+    height: 50%;
+}
+
+.hidden {
+    display: none;
+}
+
+.player {
+    text-align: center;
+    position: relative;
+}
+
+.player p {
+    margin: 0;
+    padding: 5px;
+    background-color: #fff;
+    border: 1px solid #000;
+    display: inline-block;
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#question {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0%;
+    background-color: #fff;
+    padding: 10px;
+    border: 1px solid #000;
+    border-radius: 25px;
+    z-index: 1000;
+}
+
+#question button {
+    padding: 10px 20px;
+    font-size: 1em;
+}
+
+#question input {
+    margin-bottom: 10px;
+    padding: 5px;
+    font-size: 1em;
+}
+
+#question p {
+    margin-bottom: 10px;
+}
+
+#result {
+    position: fixed;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 2em;
+    font-weight: bold;
+    text-align: center;
+    z-index: 1000;
+    color: white;
+}
+
+.turn {
+    animation: turnAnimation 0.5s ease-in-out;
+}
+
+@keyframes turnAnimation {
+    from { transform: scale(1); }
+    to { transform: scale(1.1); }
+}

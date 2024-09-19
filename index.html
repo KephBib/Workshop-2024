@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div id="player1" class="player turn" aria-live="polite">
+            <p id="pv1">PV : 5</p>
+            <img id="img1" src="robot.png" alt="J1" width="150px">
+        </div>
+        <div id="computer" class="player" aria-live="polite">
+            <p id="pv2">PV : 5</p>
+            <img src="Python.png" alt="ORDI" width="200px">
+        </div>
+    </div>
+    
+    <div id="actions">
+        <button onclick="htmlAction()" aria-label="HTML">HTML</button>
+        <button onclick="pythonAction()" aria-label="Python">Python</button>
+        <button onclick="javaAction()" aria-label="Java">Java</button>
+        <button onclick="cppAction()" aria-label="C++">C++</button>
+        <button onclick="action('infos')" aria-label="Infos">Infos</button>
+        <button onclick="action('passer')" aria-label="Passer">Passer</button>
+    </div>    
+
+    <div id="question" class="hidden">
+        <p></p>
+        <button onclick="submitAnswer()" id="submitAnswer">Attaquer</button>
+    </div>        
+
+    <script src="script.js"></script>
+</body>
+</html>
